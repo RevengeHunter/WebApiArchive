@@ -1,0 +1,15 @@
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Application\bin\Debug\net10.0\Bussines_Library.Application.deps.json
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Application\bin\Debug\net10.0\Bussines_Library.Application.dll
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Application\bin\Debug\net10.0\Bussines_Library.Application.pdb
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Application\bin\Debug\net10.0\Bussines_Library.Domain.dll
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Application\bin\Debug\net10.0\Bussines_Library.Domain.pdb
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Application\obj\Debug\net10.0\Bussines_Library.Application.csproj.AssemblyReference.cache
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Application\obj\Debug\net10.0\Bussines_Library.Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Application\obj\Debug\net10.0\Bussines_Library.Application.AssemblyInfoInputs.cache
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Application\obj\Debug\net10.0\Bussines_Library.Application.AssemblyInfo.cs
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Application\obj\Debug\net10.0\Bussines_Library.Application.csproj.CoreCompileInputs.cache
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Application\obj\Debug\net10.0\Bussines.83E63AFD.Up2Date
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Application\obj\Debug\net10.0\Bussines_Library.Application.dll
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Application\obj\Debug\net10.0\refint\Bussines_Library.Application.dll
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Application\obj\Debug\net10.0\Bussines_Library.Application.pdb
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Application\obj\Debug\net10.0\ref\Bussines_Library.Application.dll

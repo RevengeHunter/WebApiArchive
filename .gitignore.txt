@@ -1,0 +1,14 @@
+# Ignora archivos del sistema Mac 
+.DS_store
+
+# Ignora la carpeta node_modules
+node_modules/
+
+# Ignora todos los siguientes archivos
+Bussines_Library.Api/appsettings.json
+
+# Ignora los archivos relacionados a API keys
+.env
+
+# Ignora archivos de configuración SASS
+.sass-cache

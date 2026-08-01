@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Q2iuvCNKZ5w=",
+  "success": true,
+  "projectFilePath": "E:\\CIBERTECT\\Codigo\\Módulo 02\\VS_Advance_Library_DDD_Clean_Architeture\\Bussines_Library.Application\\Bussines_Library.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Cristhian\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
+    "C:\\Users\\Cristhian\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.1.1\\fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",
+    "C:\\Users\\Cristhian\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.10\\microsoft.extensions.dependencyinjection.abstractions.10.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}

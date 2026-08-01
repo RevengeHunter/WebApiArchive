@@ -1,0 +1,7 @@
+﻿namespace Bussines_Library.Application.Abstractions.Clock
+{
+    public interface IDateTimeProvider
+    {
+        DateTime UtcNow { get;  }
+    }
+}

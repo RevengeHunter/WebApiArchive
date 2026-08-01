@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Bussines_Library.Api/Bussines_Library.Api.csproj" />
+  <Project Path="Bussines_Library.Application/Bussines_Library.Application.csproj" />
+  <Project Path="Bussines_Library.Domain/Bussines_Library.Domain.csproj" />
+  <Project Path="Bussines_Library.Infraestructure/Bussines_Library.Infraestructure.csproj" />
+  <Project Path="Bussines_Library.Test/Bussines_Library.Test.csproj" Id="9206da9e-ad25-49a9-b54e-d992dd8b73fd" />
+</Solution>

@@ -1,0 +1,17 @@
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Infraestructure\bin\Debug\net10.0\Bussines_Library.Infraestructure.deps.json
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Infraestructure\bin\Debug\net10.0\Bussines_Library.Infraestructure.dll
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Infraestructure\bin\Debug\net10.0\Bussines_Library.Infraestructure.pdb
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Infraestructure\bin\Debug\net10.0\Bussines_Library.Application.dll
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Infraestructure\bin\Debug\net10.0\Bussines_Library.Domain.dll
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Infraestructure\bin\Debug\net10.0\Bussines_Library.Application.pdb
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Infraestructure\bin\Debug\net10.0\Bussines_Library.Domain.pdb
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Infraestructure\obj\Debug\net10.0\Bussines_Library.Infraestructure.csproj.AssemblyReference.cache
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Infraestructure\obj\Debug\net10.0\Bussines_Library.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Infraestructure\obj\Debug\net10.0\Bussines_Library.Infraestructure.AssemblyInfoInputs.cache
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Infraestructure\obj\Debug\net10.0\Bussines_Library.Infraestructure.AssemblyInfo.cs
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Infraestructure\obj\Debug\net10.0\Bussines_Library.Infraestructure.csproj.CoreCompileInputs.cache
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Infraestructure\obj\Debug\net10.0\Bussines.88E8E1EF.Up2Date
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Infraestructure\obj\Debug\net10.0\Bussines_Library.Infraestructure.dll
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Infraestructure\obj\Debug\net10.0\refint\Bussines_Library.Infraestructure.dll
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Infraestructure\obj\Debug\net10.0\Bussines_Library.Infraestructure.pdb
+E:\CIBERTECT\Codigo\Módulo 02\VS_Advance_Library_DDD_Clean_Architeture\Bussines_Library.Infraestructure\obj\Debug\net10.0\ref\Bussines_Library.Infraestructure.dll
