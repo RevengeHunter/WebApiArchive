@@ -1,5 +1,15 @@
 ﻿################################################################################
 # Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
 ################################################################################
+# Carpetas de Visual Studio
+.vs/
+*.suo
+*.user
+*.slnx.user
 
+# Carpetas de compilación de .NET
+[Bb]in/
+[Oo]bj/
+
+# Archivos de configuración
 /Bussines_Library.Api/appsettings.json
