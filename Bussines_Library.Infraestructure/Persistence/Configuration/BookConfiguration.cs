@@ -23,6 +23,10 @@ namespace Bussines_Library.Infraestructure.Persistence.Configuration
                 .IsRequired()
                 .HasMaxLength(100);
             builder.HasIndex(b => b.Title).IsUnique();
+            builder.HasOne(b => b.Author)
+                .WithMany(a => a.Books)
+                .HasForeignKey(b => b.AuthorId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

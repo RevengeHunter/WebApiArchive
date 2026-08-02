@@ -62,7 +62,7 @@ namespace Bussines_Library.Application.Features.Books.Services
                 return Result<BookDTO>.Failure(new Error("Book.AlreadyExists", "Book with the same name already exists", ErrorType.Conflict));
             }
 
-            var book = Book.Create(command.Name, command.Description);
+            var book = Book.Create(command.Name, command.Description, command.AuthorId);
             await _bookRepository.AddAsync(book, cancellationToken);
             await _unitOfWork.SaveChangesAsync(cancellationToken);
 

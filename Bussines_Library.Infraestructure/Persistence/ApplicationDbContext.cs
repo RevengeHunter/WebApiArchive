@@ -46,5 +46,6 @@ namespace Bussines_Library.Infraestructure.Persistence
 
         // Define your DbSets for entities here
         public DbSet<Book> Books => Set<Book>();
+        public DbSet<Author> Authors => Set<Author>();
     }
 }

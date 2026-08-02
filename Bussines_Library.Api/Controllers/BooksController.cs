@@ -58,7 +58,7 @@ namespace Bussines_Library.Api.Controllers
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status409Conflict)]
         public async Task<ActionResult<BookDTO>> CreateBook([FromBody] CreateBookRequest request, [FromHeader(Name = "Idempotency-Key")] string? idempotencyKey, CancellationToken cancellationToken)
         {
-            var result = await bookService.CreateBookAsync(new CreateBookCommand(request.Title, request.Description), cancellationToken);
+            var result = await bookService.CreateBookAsync(new CreateBookCommand(request.Title, request.Description, request.AuthorId), cancellationToken);
 
             if (result.IsSuccess && result.Value is not null)
             {
