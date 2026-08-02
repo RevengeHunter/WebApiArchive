@@ -1,4 +1,7 @@
-﻿namespace Bussines_Library.Domain.Constants
+﻿using Bussines_Library.Domain.Entities;
+using System.Xml.Linq;
+
+namespace Bussines_Library.Domain.Constants
 {
     public static class AuthorConstants
     {
@@ -24,5 +27,11 @@
         public static readonly string FATHERS_SURNAME_MAX_LENGTH_MESSAGE = $"Fathers surname cannot exceed {FATHERS_SURNAME_MAX_LENGTH} characters.";
         public static readonly string MOTHERS_SURNAME_MAX_LENGTH_MESSAGE = $"Mothers surname cannot exceed {MOTHERS_SURNAME_MAX_LENGTH} characters.";
         public static readonly string NATIONALITY_MAX_LENGTH_MESSAGE = $"Nationality cannot exceed {NATIONALITY_MAX_LENGTH} characters.";
+
+        public const string AUTHOR_ALREADY_EXISTS = "Author.AlreadyExists";
+        public const string AUTHOR_ALREADY_EXISTS_MESSAGE = "Author with the same name already exists.";
+
+        public const string AUTHOR_NOT_FOUND = "Author.NotFound";
+        public const string AUTHOR_NOT_FOUND_MESSAGE = "Author not found.";
     }
 }
