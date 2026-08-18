@@ -2,6 +2,7 @@
 using Bussines_Library.Application.Abstractions.Clock;
 using Bussines_Library.Application.Abstractions.Data;
 using Bussines_Library.Application.Abstractions.Idempotency;
+using Bussines_Library.Application.Features.Authors.Repositories;
 using Bussines_Library.Application.Features.Books.Repositories;
 using Bussines_Library.Infraestructure.Authentication;
 using Bussines_Library.Infraestructure.Persistence;
@@ -35,6 +36,7 @@ namespace Bussines_Library.Infraestructure.DepencyInjection
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
             services.AddScoped<IBookRepository, BookRepository>();
+            services.AddScoped<IAuthorRepository, AuthorRepository>();
             services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
             services.AddSingleton<IIdempotencyService, NoOpIdempotencyService>();
             services.AddScoped<IJwtGenerator, JwtTokenGenerator>();

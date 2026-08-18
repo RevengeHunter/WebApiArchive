@@ -5,6 +5,6 @@ namespace Bussines_Library.Application.Features.Authors.Parameters
     public sealed record AuthorQueryParameters(
         PaginationRequest Pagination,
         string? SearchTerm = null,
-        string? sort = null
+        string? Sort = null
     );
 }

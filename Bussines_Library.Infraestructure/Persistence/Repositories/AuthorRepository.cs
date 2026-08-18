@@ -29,7 +29,7 @@ namespace Bussines_Library.Infraestructure.Persistence.Repositories
         {
             var pageNumber = parameters.Pagination.SafePageNumber;
             var pageSize = parameters.Pagination.SafePageSize;
-            var query = _dbContext.Authors.AsNoTracking();
+            var query = _dbContext.Authors.Where(x => x.IsActive).AsNoTracking();
 
             if(!string.IsNullOrWhiteSpace(parameters.SearchTerm))
             {
@@ -37,7 +37,7 @@ namespace Bussines_Library.Infraestructure.Persistence.Repositories
                 query = query.Where(x => x.Name.Contains(searchTerm) || x.FathersSurname.Contains(searchTerm) || x.MothersSurname.Contains(searchTerm));
             }
 
-            query = ApplySorting(query, parameters.sort);
+            query = ApplySorting(query, parameters.Sort);
             var totalCount = await query.CountAsync(cancellationToken);
             var authors = await query.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync(cancellationToken);
 
@@ -66,6 +66,11 @@ namespace Bussines_Library.Infraestructure.Persistence.Repositories
 
         private static IQueryable<Author> ApplySorting(IQueryable<Author> query, string? sort)
         {
+            if(sort == null)
+            {
+                return query.OrderByDescending(x => x.CreatedAtUtc);
+            }
+
             var parts = sort?.Split(':', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
             var field = parts.Length > 0 ? parts[0].ToLowerInvariant() : "created-at";
             var descending = parts.Length > 1 && parts[1].Equals("desc", StringComparison.OrdinalIgnoreCase);

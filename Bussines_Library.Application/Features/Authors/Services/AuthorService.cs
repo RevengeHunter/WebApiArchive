@@ -22,26 +22,20 @@ namespace Bussines_Library.Application.Features.Authors.Services
         private readonly IUnitOfWork _unitOfWork;
         private readonly IValidator<CreateAuthorCommand> _createAuthorValidator;
         private readonly IValidator<UpdateAuthorCommand> _updateAuthorValidator;
-        private readonly IValidator<ActiveAuthorCommand> _activeAuthorValidator;
         private readonly IValidator<GetAuthorsQuery> _getAuthorsValidator;
-        private readonly IValidator<GetAuthorByIdQuery> _getAuthorByIdValidator;
 
         public AuthorService(
             IAuthorRepository authorRepository,
             IUnitOfWork unitOfWork,
             IValidator<CreateAuthorCommand> createAuthorValidator,
             IValidator<UpdateAuthorCommand> updateAuthorValidator,
-            IValidator<ActiveAuthorCommand> activeAuthorValidator,
-            IValidator<GetAuthorsQuery> getAuthorsValidator,
-            IValidator<GetAuthorByIdQuery> getAuthorByIdValidator)
+            IValidator<GetAuthorsQuery> getAuthorsValidator)
         {
             _authorRepository = authorRepository;
             _unitOfWork = unitOfWork;
             _createAuthorValidator = createAuthorValidator;
             _updateAuthorValidator = updateAuthorValidator;
-            _activeAuthorValidator = activeAuthorValidator;
             _getAuthorsValidator = getAuthorsValidator;
-            _getAuthorByIdValidator = getAuthorByIdValidator;
         }
 
         public async Task<Result<AuthorDTO>> CreateAuthorAsync(CreateAuthorCommand createAuthorCommand, CancellationToken cancellationToken = default)

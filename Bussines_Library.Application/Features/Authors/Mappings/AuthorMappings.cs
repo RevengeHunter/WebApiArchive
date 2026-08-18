@@ -10,8 +10,10 @@ namespace Bussines_Library.Application.Features.Authors.Mappings
         {
             return new AuthorDTO(
             author.Id,
-            $"{author.Name} {author.FathersSurname} {author.MothersSurname}",
-            author.Nationality,
+            author.Name,
+            author.FathersSurname,
+            author.MothersSurname,
+            author.Nationality ?? string.Empty,
             author.Books.Select(b => b.ToDTO()).ToList(),
             author.CreatedAtUtc,
             author.UpdateAtUtc ?? DateTime.UtcNow);

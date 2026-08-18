@@ -1,15 +1,15 @@
 ﻿using Bussines_Library.Application.Common.Pagination;
-using Bussines_Library.Application.Features.Books.Queries.GetBooks;
+using Bussines_Library.Application.Features.Authors.Queries.GetAuthors;
 using Bussines_Library.Domain.Constants;
 using FluentValidation;
 
 namespace Bussines_Library.Application.Features.Authors.Validators
 {
-    public sealed class GetBooksQueryValidator : AbstractValidator<GetBooksQuery>
+    public sealed class GetAuthorsQueryValidator : AbstractValidator<GetAuthorsQuery>
     {
         private static readonly string[] SortableFields = { "Name" };
 
-        public GetBooksQueryValidator()
+        public GetAuthorsQueryValidator()
         {
             RuleFor(x => x.PageNumber)
                 .GreaterThan(0).WithMessage(PaginatorConstants.PAGE_NUMBER_MUST_BE_GREATER_THAN_0);

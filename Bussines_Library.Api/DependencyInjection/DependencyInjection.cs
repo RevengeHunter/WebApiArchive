@@ -5,6 +5,7 @@ using Bussines_Library.Api.Middleware;
 using Bussines_Library.Api.OpenApi;
 using Bussines_Library.Api.Options;
 using Bussines_Library.Application.Abstractions.CurrentUser;
+using Bussines_Library.Domain.Constants;
 using Bussines_Library.Infraestructure.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
@@ -62,8 +63,13 @@ namespace Bussines_Library.Api.DependencyInjection
             services.ConfigureJwt(configuration);
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("Books.Read", policy => policy.RequireAuthenticatedUser());
-                options.AddPolicy("Books.Write", policy => policy.RequireRole("Administrator"));
+                options.AddPolicy(Polices.BooksRead, policy => policy.RequireAuthenticatedUser());
+                options.AddPolicy(Polices.BooksWrite, policy => policy.RequireRole(Roles.Admin));
+
+                options.AddPolicy(Polices.AuthorsRead, policy => policy.RequireAuthenticatedUser());
+                options.AddPolicy(Polices.AuthorsWrite, policy => policy.RequireRole(Roles.Admin));
+                options.AddPolicy(Polices.AuthorsUpdate, policy => policy.RequireRole(Roles.Admin));
+                options.AddPolicy(Polices.AuthorsActivate, policy => policy.RequireRole(Roles.Admin));
             });
             return services;
         }
