@@ -70,6 +70,10 @@ namespace Bussines_Library.Api.DependencyInjection
                 options.AddPolicy(Polices.AuthorsWrite, policy => policy.RequireRole(Roles.Admin));
                 options.AddPolicy(Polices.AuthorsUpdate, policy => policy.RequireRole(Roles.Admin));
                 options.AddPolicy(Polices.AuthorsActivate, policy => policy.RequireRole(Roles.Admin));
+
+                options.AddPolicy(Polices.LoansRead, policy => policy.RequireAuthenticatedUser());
+                options.AddPolicy(Polices.LoansWrite, policy => policy.RequireRole(Roles.Admin));
+                options.AddPolicy(Polices.LoansReturn, policy => policy.RequireRole(Roles.Admin));
             });
             return services;
         }

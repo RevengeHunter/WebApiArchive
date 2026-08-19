@@ -17,5 +17,13 @@
         public const string AuthorsActivate = "Authors.Activate";
 
         #endregion
+
+        #region Loan polices
+
+        public const string LoansRead = "Loans.Read";
+        public const string LoansWrite = "Loans.Write";
+        public const string LoansReturn = "Loans.Return";
+
+        #endregion
     }
 }

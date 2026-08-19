@@ -23,7 +23,9 @@ namespace Bussines_Library.Infraestructure.Persistence.Repositories
         {
             var pageNumber = loanQueryParameters.Pagination.SafePageNumber;
             var pageSize = loanQueryParameters.Pagination.SafePageSize;
-            var query = _dbContext.Loans.Where(x => x.Status == LoanStatus.Prestado).AsNoTracking();
+            var query = _dbContext.Loans.Where(x => x.Status == LoanStatus.Prestado)
+                .Include(x => x.Book)
+                .AsNoTracking();
 
             if (!string.IsNullOrWhiteSpace(loanQueryParameters.SearchTerm))
             {
@@ -40,7 +42,7 @@ namespace Bussines_Library.Infraestructure.Persistence.Repositories
 
         public Task<Loan> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
         {
-            return _dbContext.Loans.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
+            return _dbContext.Loans.AsTracking().FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public Task<bool> HasActiveLoanAsync(Guid bookId, CancellationToken cancellationToken = default)
