@@ -49,7 +49,7 @@ namespace Bussines_Library.Test.Application.Features.Books.Services
         public async Task CreateBookAsync_ShouldCreateBook_WhenCommandIsValid()
         {
             // Arrange ->
-            var command = new CreateBookCommand("Libro de Prueba", "Descripcion de prueba");
+            var command = new CreateBookCommand("Libro de Prueba", "Descripcion de prueba", new Guid("D9A1B2C3-4E5F-6789-ABCD-EF0123456789"));
 
             // Configurar el comportamiento del validador simulado para que devuelva un resultado de
             // validación exitoso
@@ -83,7 +83,7 @@ namespace Bussines_Library.Test.Application.Features.Books.Services
         public async Task CreateBookAsync_ShouldReturnValidationFailure_WhenCommandIsInvalid()
         {
             // Arrange
-            var command = new CreateBookCommand("", "Descripción de prueba");
+            var command = new CreateBookCommand("", "Descripción de prueba", new Guid("D9A1B2C3-4E5F-6789-ABCD-EF0123456789"));
 
             var validationFailures = new List<ValidationFailure>
             {
@@ -120,7 +120,7 @@ namespace Bussines_Library.Test.Application.Features.Books.Services
         public async Task CreateBookAsync_ShouldReturnFailure_WhenBookAlreadyExists()
         {
             // Arrange
-            var command =  new CreateBookCommand("Harry Potter y la Piedra Filosofal", "Descripción de prueba");
+            var command =  new CreateBookCommand("Harry Potter y la Piedra Filosofal", "Descripción de prueba", new Guid("D9A1B2C3-4E5F-6789-ABCD-EF0123456789"));
 
             _createValidatorMock.Setup(v => v.ValidateAsync(command, It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new ValidationResult());
@@ -147,7 +147,7 @@ namespace Bussines_Library.Test.Application.Features.Books.Services
         public async Task CreateBookAsync_ShouldTrowException_WhenRepositoryThrowsException()
         {
             // Arrange
-            var command = new CreateBookCommand("Libro de Prueba", "Descripción de prueba");
+            var command = new CreateBookCommand("Libro de Prueba", "Descripción de prueba", new Guid("D9A1B2C3-4E5F-6789-ABCD-EF0123456789"));
 
             _createValidatorMock.Setup(v => v.ValidateAsync(command, It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new ValidationResult());
@@ -245,9 +245,10 @@ namespace Bussines_Library.Test.Application.Features.Books.Services
         {
             // Arrange
             var bookId = new Guid("84331D9C-8CF3-45E1-890B-CEBD30A2D64B");
+            var authorId = new Guid("D9A1B2C3-4E5F-6789-ABCD-EF0123456789");
             var query = new GetBookByIdQuery(bookId);
 
-            var book = Book.Create("Harry Potter", "La historia de un joven brujo.");
+            var book = Book.Create("Harry Potter", "La historia de un joven brujo.", authorId);
 
             _bookRepositoryMock.Setup(r => r.GetByIdAsync(bookId, It.IsAny<CancellationToken>()))
                 .ReturnsAsync(book);
@@ -292,7 +293,7 @@ namespace Bussines_Library.Test.Application.Features.Books.Services
             // Arrange
             var bookId = Guid.NewGuid();
             var command = new UpdateBookCommand(bookId, "Nuevo Título", "Nueva Descripción");
-            var existingBook = Book.Create("Título Antiguo", "Descripción Antigua");
+            var existingBook = Book.Create("Título Antiguo", "Descripción Antigua", new Guid("D9A1B2C3-4E5F-6789-ABCD-EF0123456789"));
 
             _bookRepositoryMock.Setup(r => r.GetByIdAsync(bookId, It.IsAny<CancellationToken>()))
                 .ReturnsAsync(existingBook);
@@ -350,7 +351,7 @@ namespace Bussines_Library.Test.Application.Features.Books.Services
             // Arrange
             var bookId = Guid.NewGuid();
             var command = new UpdateBookCommand(bookId, "Nuevo Título", "Nueva Descripción");
-            var existingBook = Book.Create("", "");
+            var existingBook = Book.Create("", "", Guid.Empty);
             
             _bookRepositoryMock.Setup(r => r.GetByIdAsync(bookId, It.IsAny<CancellationToken>()))
                 .ReturnsAsync(existingBook);
@@ -381,7 +382,7 @@ namespace Bussines_Library.Test.Application.Features.Books.Services
             // Arrange
             var bookId = Guid.NewGuid();
             var command = new DeleteBookCommand(bookId);
-            var existingBook = Book.Create("Título", "Descripción");
+            var existingBook = Book.Create("Título", "Descripción", new Guid("D9A1B2C3-4E5F-6789-ABCD-EF0123456789"));
             _bookRepositoryMock.Setup(r => r.GetByIdAsync(bookId, It.IsAny<CancellationToken>()))
                 .ReturnsAsync(existingBook);
             
@@ -426,7 +427,7 @@ namespace Bussines_Library.Test.Application.Features.Books.Services
             // Arrange
             var bookId = Guid.NewGuid();
             var command = new DeleteBookCommand(bookId);
-            var existingBook = Book.Create("Título", "Descripción");
+            var existingBook = Book.Create("Título", "Descripción", new Guid("D9A1B2C3-4E5F-6789-ABCD-EF0123456789"));
 
             _bookRepositoryMock.Setup(r => r.GetByIdAsync(bookId, It.IsAny<CancellationToken>()))
                 .ReturnsAsync(existingBook);

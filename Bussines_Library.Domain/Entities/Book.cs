@@ -11,21 +11,23 @@ namespace Bussines_Library.Domain.Entities
         public Guid Id { get; private set; }
         public string Title { get; private set; } = string.Empty;
         public string? Description { get; private set; } = string.Empty;
-
+        public Guid AuthorId { get; private set; }
+        public Author Author { get; private set; } = default!;
 
         private Book()
         {
             Title = string.Empty;
         }
 
-        private Book(Guid id, string title, string? description)
+        private Book(Guid id, string title, string? description, Guid authorId)
         {
             Id = id;
             Title = title;
             Description = description;
+            AuthorId = authorId;
         }
 
-        public static Book Create(string title, string? description) => new(Guid.NewGuid(), title, description);
+        public static Book Create(string title, string? description, Guid authorId) => new(Guid.NewGuid(), title, description, authorId);
         public void Rename(string title) => SetTitle(title);
         public void changeDescription(string? description) => SetDescription(description);
 
