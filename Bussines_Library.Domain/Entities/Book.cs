@@ -13,6 +13,7 @@ namespace Bussines_Library.Domain.Entities
         public string? Description { get; private set; } = string.Empty;
         public Guid AuthorId { get; private set; }
         public Author Author { get; private set; } = default!;
+        public Loan Loan { get; private set; } = default!;
 
         private Book()
         {

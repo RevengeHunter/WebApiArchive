@@ -1,11 +1,12 @@
 ﻿using Bussines_Library.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Bussines_Library.Infraestructure.Persistence.Configuration
 {
     public sealed class AuthorConfiguration : IEntityTypeConfiguration<Author>
     {
-        public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Author> builder)
+        public void Configure(EntityTypeBuilder<Author> builder)
         {
             builder.ToTable("Authors");
 
