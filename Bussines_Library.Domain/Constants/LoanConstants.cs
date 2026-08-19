@@ -14,5 +14,15 @@
 
         public const string APPLICANT_NAME_TOO_LONG = "Applicant name is too long.";
 
+        public static readonly string APPLICANT_NAME_TOO_LONG_MESSAGE = $"Applicant name cannot exceed {APPLICANT_NAME_MAX_LENGTH} characters.";
+
+        public const string EXPECTED_RETURN_DATE_EARLIER_THAN_LOAN_DATE = "Expected return date cannot be earlier than loan date.";
+        public const string INVALID_DATE = "Invalid return date.";
+
+        public const string BOOK_ALREADY_LOANED = "Already on loan";
+        public const string BOOK_ALREADY_LOANED_MESSAGE = "The book is already on loan.";
+
+        public const string LOAN_NOT_FOUND = "Not Found";
+        public const string LOAN_NOT_FOUND_MESSAGE = "The loan was not found.";
     }
 }
