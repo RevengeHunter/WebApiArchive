@@ -61,14 +61,14 @@ namespace Bussines_Library.Api.Controllers
             return await FromResultAsync(result);
         }
 
-        [HttpPut]
+        [HttpPut("{id}/return")]
         [Authorize(Policy = Polices.LoansReturn)]
         [Consumes(Consumes.Json)]
         [Produces(Produces.Json)]
         [ProducesResponseType(typeof(LoanDTO), StatusCodes.Status200OK)]
-        public async Task<ActionResult<LoanDTO>> ReturnAuthorAsync(ReturnLoanRequest request, CancellationToken cancellationToken)
+        public async Task<ActionResult<LoanDTO>> ReturnLoanAsync(Guid id, CancellationToken cancellationToken)
         {
-            var command = new ReturnLoanCommand(request.Id);
+            var command = new ReturnLoanCommand(id);
             var result = await _loanService.ReturnLoanAsync(command, cancellationToken);
             return await FromResultAsync(result);
         }
