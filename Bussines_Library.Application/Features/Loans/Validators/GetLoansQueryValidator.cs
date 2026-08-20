@@ -7,7 +7,7 @@ namespace Bussines_Library.Application.Features.Loans.Validators
 {
     public sealed class GetLoansQueryValidator : AbstractValidator<GetLoansQuery>
     {
-        private static readonly string[] SortableFields = { "Name" };
+        private static readonly string[] SortableFields = { "ApplicantName" };
 
         public GetLoansQueryValidator()
         {

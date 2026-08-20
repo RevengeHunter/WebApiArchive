@@ -63,8 +63,8 @@ namespace Bussines_Library.Infraestructure.Persistence.Repositories
 
             return (field, descending) switch
             {
-                ("applicantName", false) => query.OrderBy(x => x.ApplicantName),
-                ("applicantName", true) => query.OrderByDescending(x => x.ApplicantName),
+                ("ApplicantName", false) => query.OrderBy(x => x.ApplicantName),
+                ("ApplicantName", true) => query.OrderByDescending(x => x.ApplicantName),
                 ("update-at", false) => query.OrderBy(x => x.UpdateAtUtc),
                 ("update-at", true) => query.OrderByDescending(x => x.UpdateAtUtc),
                 (_, true) => query.OrderByDescending(x => x.CreatedAtUtc),
